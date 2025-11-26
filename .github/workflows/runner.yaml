@@ -31,12 +31,12 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ~/.cache/golangci-lint
-          key: ${{ runner.os }}-golangci-lint-v2.14.0
+          key: ${{ runner.os }}-golangci-lint-v1.59.1
           restore-keys: |
             ${{ runner.os }}-golangci-lint-
 
       - name: Run golangci-lint
         uses: golangci/golangci-lint-action@v7
         with:
-          version: v2.14.0
+          version: v1.59.1
           args: ./...
